@@ -13,84 +13,189 @@
 .header {
   text-align: center;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 }
 
 .grid {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  gap: 4px;
-  padding: 4px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+}
+  
+.body {
+  background-color:#9CD788;
+}
+.background {
+  background-image: url('assets/background.png');
+  background-size: 100% 100%;
 }
 
 .card {
-  background-color: #f0f0f0;
+  display: flex;
   aspect-ratio: 1 / 1;
-  border-radius: 8px;
   width: 100%;
+  background-image: url('assets/weeds.png');
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
 }
+
+.baldcypress {
+  position: absolute;
+  aspect-ratio: 21 / 35;
+  width: 10%;
+  top: 25%;
+  left: 45%;
+}
+
+.woodoats {
+  position: absolute;
+  aspect-ratio: 30 / 34;
+  width: 14%;
+  top: 91%;
+  left: 71%;
+}
+
+.twistedyucca {
+  position: absolute;
+  aspect-ratio: 32 / 34;
+  width: 15%;
+  top: 85%;
+  left: 14%;
+}
+
+
+#plant1.revealed { background-image: none !important; }
 
 #plant1 {
-  grid-column-start: 5;
-  grid-column-end: 8;
-  grid-row-start: 3;
-  grid-row-end: 6;
-}
-
-#plant1:target {
-  background-color: #90EE90;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 6;  
+  background-image: url('assets/emptyslot.png');
 }
 
 #plant2 {
-  grid-column-start: 2;
-  grid-column-end: 5;
-  grid-row-start: 8;
-  grid-row-end: 11;
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 15;
+  grid-row-end: 16;
 }
 
-#plant2:target {
-  background-color: #90EE90;
-}
+#plant2.clickable { background-image: url('assets/emptyslot.png') !important; }
+#plant2.revealed { background-image: none !important; }
 
 #plant3 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 11;
+  grid-row-end: 12;
 }
 
 #plant4 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 4;
-  grid-row-end: 5;  
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 14;
+  grid-row-end: 15;
 }
 
+#plant4.clickable { background-image: url('assets/emptyslot.png') !important; }
+#plant4.revealed { background-image: none !important; }
+
+
 #plant5 {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 6;
-  grid-row-end: 7;  
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 5;
+  grid-row-end: 6;  
 }
 
 #plant6 {
-  grid-column-start: 7;
-  grid-column-end: 9;
-  grid-row-start: 9;
-  grid-row-end: 11;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;  
 }
 
 #plant7 {
-  grid-column-start: 5;
-  grid-column-end: 7;
-  grid-row-start: 7;
-  grid-row-end: 9;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 #plant8 {
   grid-column-start: 5;
-  grid-column-end: 7;
-  grid-row-start: 10;
-  grid-row-end: 12;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#plant9 {
+  grid-column-start: 7;
+  grid-column-end: 8;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+#plant10 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.plantbackground {
+  aspect-ratio: 210 / 454;
+  background-image: url('assets/plantbackground.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+h1 {
+  font-family: "Pixelify Sans";
+  font-weight: 400;
+  font-size: 24px;
+  color: #563020;
+  background-image: url('assets/headerbackground.png');
+  width: 58%;
+  background-size: cover;
+  background-position: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin: 0 auto; 
+}
+
+.plantcard {
+  width: 44%;
+  height: auto;
+}
+
+.plantdescription {
+  width: 68%;
+  padding: 12px;
+  background: #EFD8B7;
+  color: #563020;
+  font-family: "Pixelify Sans";
+  font-size: 18px;
+  text-align: center;
+}
+
+.button {
+  padding: 12px 20px;
+  margin-top: 24px;
+  background: #563020;
+  color: #ffffff;
+  font-family: "Pixelify Sans";
+  font-size: 18px;
+  border: 4px solid #2B140B;
 }
